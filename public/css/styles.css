@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(100, 96, 91);
+  
+}
+
+h1{
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 10px;
+}
