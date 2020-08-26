@@ -1,4 +1,5 @@
 const express = require('express');
+const fs = require('fs')
 const router = express.Router();
 
 let timestamp = Date.now();
@@ -22,17 +23,20 @@ router.get('/user/dashboard', (req,res)=> {
 });
 
 router.post('/user/register', (req,res)=> {
+    const body = (`USERNAME:${req.body.user_name}/EMAIL: ${req.body.email}/PASSWORD:${req.body.password}`);
     res.render('register');
     let timestamp = Date.now();
-    console.log(`${req.body.user_name} ${req.body.email} ${req.body.password}`);
-
+    console.log(`${body}`);
+   
 });
 
 router.post('/user/login', (req,res)=> {
+    const body = (`USERNAME:${req.body.user_name}/EMAIL: ${req.body.email}/PASSWORD:${req.body.password}`);
     res.render('login');
     let timestamp = Date.now();
-    console.log(`${req.body.user_name} ${req.body.email} ${req.body.password}`);
+    console.log(`${body}`);
 
 });
+
 
 module.exports = router;
